@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '/widget/homepage_drawer.dart';
+
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -28,7 +30,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      drawer: Drawer(),
+      drawer: HomePageDrawer(),
     );
   }
 }
