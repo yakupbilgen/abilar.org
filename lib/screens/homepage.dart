@@ -8,10 +8,17 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
       appBar: AppBar(
+        leading: IconButton(
+          onPressed: () => _scaffoldKey.currentState.openDrawer(),
+          icon: Icon(Icons.menu),
+          tooltip: 'Menüyü aç',
+        ),
         title: Text(
           'ABA',
           style: TextStyle(fontWeight: FontWeight.bold),

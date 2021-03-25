@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '/color/color.dart';
+
 class HomePageDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -7,57 +9,56 @@ class HomePageDrawer extends StatelessWidget {
       padding: EdgeInsets.only(top: 20.0),
       child: Drawer(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Text(
-              'ABA',
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            Container(
+              padding: EdgeInsets.all(20.0),
+              child: Image.asset('assets/images/abaustlogo.png'),
             ),
-            Text(
-              'AKADEMİK BİLİŞİM ARAŞTIRMALARI DERNEĞİ',
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
-            Divider(),
-            ListTile(
-              leading:
-                  CircleAvatar(child: Icon(Icons.insert_drive_file_outlined)),
-              title: Text('AJİT-E'),
-            ),
-            Divider(),
-            ListTile(
-              leading:
-                  CircleAvatar(child: Icon(Icons.insert_drive_file_outlined)),
-              title: Text('HABERLER'),
-            ),
-            Divider(),
-            ListTile(
-              leading:
-                  CircleAvatar(child: Icon(Icons.insert_drive_file_outlined)),
-              title: Text('ETKİNLİKLER'),
-            ),
-            Divider(),
-            ExpansionTile(
-              leading: Icon(Icons.person),
-              title: Text('HAKKIMIZDA'),
-              children: [
-                ListTile(
-                  leading: CircleAvatar(child: Icon(Icons.people)),
-                  title: Text('Kurucu Üyeler'),
-                ),
-                ListTile(
-                  leading: CircleAvatar(child: Icon(Icons.sd)),
-                  title: Text('Tüzük'),
-                ),
-              ],
-            ),
-            Divider(),
-            ListTile(
-              leading: CircleAvatar(child: Icon(Icons.contact_phone)),
-              title: Text('İLETİŞİM'),
-            ),
-            ListTile(
-              leading: CircleAvatar(child: Icon(Icons.check)),
-              title: Text('ICTC 2018'),
+            Expanded(
+              child: ListView(
+                children: [
+                  ListTile(
+                    leading: Icon(Icons.insert_drive_file_outlined),
+                    title: Text('AJİT-E'),
+                  ),
+                  Divider(color: dividerColor),
+                  ListTile(
+                    leading: Icon(Icons.airplay),
+                    title: Text('HABERLER'),
+                  ),
+                  Divider(color: dividerColor),
+                  ListTile(
+                    leading: Icon(Icons.event),
+                    title: Text('ETKİNLİKLER'),
+                  ),
+                  Divider(color: dividerColor),
+                  ExpansionTile(
+                    leading: Icon(Icons.person),
+                    title: Text('HAKKIMIZDA'),
+                    children: [
+                      ListTile(
+                        leading: Icon(Icons.people),
+                        title: Text('Kurucu Üyeler'),
+                      ),
+                      ListTile(
+                        leading: Icon(Icons.sd),
+                        title: Text('Tüzük'),
+                      ),
+                    ],
+                  ),
+                  Divider(color: dividerColor),
+                  ListTile(
+                    leading: Icon(Icons.contact_phone),
+                    title: Text('İLETİŞİM'),
+                  ),
+                  Divider(color: dividerColor),
+                  ListTile(
+                    leading: Icon(Icons.grain),
+                    title: Text('ICTC 2018'),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
