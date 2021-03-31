@@ -1,8 +1,11 @@
+import 'package:abilar/widget/goto_url.dart';
 import 'package:flutter/material.dart';
 
 import '/color/color.dart';
 
 class HomePageDrawer extends StatelessWidget {
+  final String urlICTC = 'https://abilar.org/ictc/';
+  final String urlAjite = 'https://ajit-e.org/';
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,9 +22,12 @@ class HomePageDrawer extends StatelessWidget {
               child: ListView(
                 children: [
                   ListTile(
-                    leading: Icon(Icons.insert_drive_file_outlined),
-                    title: Text('AJİT-E'),
-                  ),
+                      leading: Icon(Icons.insert_drive_file_outlined),
+                      title: Text('AJİT-E'),
+                      onTap: () {
+                        Navigator.pop(context);
+                        gotoUrl(urlAjite);
+                      }),
                   Divider(color: dividerColor),
                   ListTile(
                     leading: Icon(Icons.airplay),
@@ -56,6 +62,10 @@ class HomePageDrawer extends StatelessWidget {
                   ListTile(
                     leading: Icon(Icons.grain),
                     title: Text('ICTC 2018'),
+                    onTap: () {
+                      Navigator.pop(context);
+                      gotoUrl(urlICTC);
+                    },
                   ),
                 ],
               ),
