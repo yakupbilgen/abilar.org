@@ -17,7 +17,7 @@ class _HomePageMainState extends State<HomePageMain> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: ContactScreen(),
+      home: HomePage(),
       theme: ThemeData(
         primaryColor: themaColor,
         accentColor: Colors.indigo,
