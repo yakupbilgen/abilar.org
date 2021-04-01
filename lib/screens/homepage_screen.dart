@@ -1,8 +1,8 @@
-import 'package:abilar/widget/goto_url.dart';
+import 'package:abilar/widget/goto_url_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:share/share.dart';
 
-import '/widget/homepage_drawer.dart';
+import '../widget/drawer_widget.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -44,7 +44,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      drawer: HomePageDrawer(),
+      drawer: DrawerWidget(),
     );
   }
 }

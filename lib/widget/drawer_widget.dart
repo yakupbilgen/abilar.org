@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '/color/color.dart';
-import '/widget/goto_url.dart';
+import 'goto_url_widget.dart';
 
-class HomePageDrawer extends StatelessWidget {
+class DrawerWidget extends StatelessWidget {
   final String _urlICTC = 'https://abilar.org/ictc/';
   final String _urlAjite = 'https://ajit-e.org/';
   @override
