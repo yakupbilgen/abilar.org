@@ -26,7 +26,7 @@ class DrawerWidget extends StatelessWidget {
                       title: Text('AJİT-E'),
                       onTap: () {
                         Navigator.pop(context);
-                        gotoUrl(_urlAjite);
+                        gotoUrlWidget(_urlAjite);
                       }),
                   Divider(color: dividerColor),
                   ListTile(
@@ -46,6 +46,10 @@ class DrawerWidget extends StatelessWidget {
                       ListTile(
                         leading: Icon(Icons.people),
                         title: Text('Kurucu Üyeler'),
+                        onTap: () {
+                          Navigator.pop(context);
+                          Navigator.pushNamed(context, "/foundingmembers");
+                        },
                       ),
                       ListTile(
                         leading: Icon(Icons.sd),
@@ -68,7 +72,7 @@ class DrawerWidget extends StatelessWidget {
                     title: Text('ICTC 2018'),
                     onTap: () {
                       Navigator.pop(context);
-                      gotoUrl(_urlICTC);
+                      gotoUrlWidget(_urlICTC);
                     },
                   ),
                 ],

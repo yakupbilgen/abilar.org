@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'color/color.dart';
+import 'screens/founding_members_screen.dart';
 import 'screens/homepage_screen.dart';
 import 'screens/contact_screen.dart';
 
@@ -31,4 +32,5 @@ class _HomePageMainState extends State<HomePageMain> {
 var buildRoute = <String, WidgetBuilder>{
   "/anasayfa": (BuildContext context) => HomePage(),
   "/iletisim": (BuildContext context) => ContactScreen(),
+  "/foundingmembers": (BuildContext context) => FoundingMembers(),
 };

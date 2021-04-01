@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
           IconButton(
             onPressed: () {
               Share.share('Bizi twitterda paylaş!');
-              gotoUrl(url);
+              gotoUrlWidget(url);
             },
             icon: Icon(Icons.share),
             tooltip: 'Paylaş',

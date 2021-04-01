@@ -79,7 +79,7 @@ class _ContactScreenState extends State<ContactScreen> {
                   children: [
                     Padding(padding: EdgeInsets.only(top: 50)),
                     TextButton(
-                      onPressed: () => gotoUrl(urlPhone),
+                      onPressed: () => gotoUrlWidget(urlPhone),
                       child: Icon(
                         FontAwesomeIcons.phone,
                         size: 60,
@@ -94,7 +94,7 @@ class _ContactScreenState extends State<ContactScreen> {
                   children: [
                     Padding(padding: EdgeInsets.only(top: 50)),
                     TextButton(
-                      onPressed: () => gotoUrl(urlMail),
+                      onPressed: () => gotoUrlWidget(urlMail),
                       child: Icon(
                         FontAwesomeIcons.envelope,
                         size: 60,
