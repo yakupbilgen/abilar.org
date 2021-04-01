@@ -2,16 +2,17 @@ import 'package:flutter/material.dart';
 
 import '../widget/founding_members_widget.dart';
 
+List<String> foundingMemberList = [
+  'Özhan TİNGÖY',
+  'Yusuf BUDAK',
+  'Ali ÖZCAN',
+  'Nalan TİNGÖY',
+  'İhsan KARLI',
+  'Necmiye TİNGÖY',
+  'Aşkın DEMİRAĞ'
+];
+
 class FoundingMembers extends StatelessWidget {
-  List<String> foundingMemberList = [
-    'Özhan TİNGÖY',
-    'Yusuf BUDAK',
-    'Ali ÖZCAN',
-    'Nalan TİNGÖY',
-    'İhsan KARLI',
-    'Necmiye TİNGÖY',
-    'Aşkın DEMİRAĞ'
-  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
