@@ -17,34 +17,38 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-      appBar: AppBar(
-        leading: IconButton(
-          onPressed: () => _scaffoldKey.currentState.openDrawer(),
-          icon: Icon(Icons.menu),
-          tooltip: 'Menüyü aç',
-        ),
-        title: Text(
-          'ABA',
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
-        centerTitle: true,
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.star),
-            tooltip: 'Puan ver',
-          ),
-          IconButton(
-            onPressed: () {
-              Share.share('Bizi twitterda paylaş!');
-              gotoUrlWidget(url);
-            },
-            icon: Icon(Icons.share),
-            tooltip: 'Paylaş',
-          ),
-        ],
-      ),
+      appBar: buildAppBar(),
       drawer: DrawerWidget(),
+    );
+  }
+
+  AppBar buildAppBar() {
+    return AppBar(
+      leading: IconButton(
+        onPressed: () => _scaffoldKey.currentState.openDrawer(),
+        icon: Icon(Icons.menu),
+        tooltip: 'Menüyü aç',
+      ),
+      title: Text(
+        'ABA',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
+      centerTitle: true,
+      actions: [
+        IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.star),
+          tooltip: 'Puan ver',
+        ),
+        IconButton(
+          onPressed: () {
+            Share.share('Bizi twitterda paylaş!');
+            gotoUrlWidget(url);
+          },
+          icon: Icon(Icons.share),
+          tooltip: 'Paylaş',
+        ),
+      ],
     );
   }
 }
