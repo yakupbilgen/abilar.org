@@ -1,3 +1,4 @@
+import 'package:abilar/screens/charter_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'color/color.dart';
@@ -33,4 +34,5 @@ var buildRoute = <String, WidgetBuilder>{
   "/anasayfa": (BuildContext context) => HomePage(),
   "/iletisim": (BuildContext context) => ContactScreen(),
   "/foundingmembers": (BuildContext context) => FoundingMembers(),
+  "/charter": (BuildContext context) => CharterScreen(),
 };

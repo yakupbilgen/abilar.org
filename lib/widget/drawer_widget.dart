@@ -54,6 +54,10 @@ class DrawerWidget extends StatelessWidget {
                       ListTile(
                         leading: Icon(Icons.sd),
                         title: Text('Tüzük'),
+                        onTap: () {
+                          Navigator.pop(context);
+                          Navigator.pushNamed(context, "/charter");
+                        },
                       ),
                     ],
                   ),
