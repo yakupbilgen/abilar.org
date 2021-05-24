@@ -11,11 +11,19 @@ class _CharterScreenState extends State<CharterScreen> {
   var _charterUrl = Uri.parse('https://abilar.org/hakkimizda/tuzuk');
 
   Future _getHttpData() async {
+    _htmlData = '';
+    setState(() {});
     await http.get(_charterUrl).then((value) {
       _htmlData = value.body;
       debugPrint(_htmlData);
       setState(() {});
     });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _getHttpData();
   }
 
   @override
