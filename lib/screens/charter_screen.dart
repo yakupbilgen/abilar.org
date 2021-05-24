@@ -35,9 +35,7 @@ class _CharterScreenState extends State<CharterScreen> {
       ),
       body: Center(
           child: _htmlData.length > 0
-              ? SingleChildScrollView(
-                  child: Text(_htmlData),
-                )
+              ? SingleChildScrollView(child: Text(_htmlData))
               : CircularProgressIndicator()),
     );
   }
