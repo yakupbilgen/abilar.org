@@ -14,6 +14,7 @@ class _CharterScreenState extends State<CharterScreen> {
     await http.get(_charterUrl).then((value) {
       _htmlData = value.body;
       debugPrint(_htmlData);
+      setState(() {});
     });
   }
 
