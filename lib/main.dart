@@ -1,7 +1,7 @@
-import 'package:abilar/screens/charter_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'color/color.dart';
+import 'screens/charter_screen.dart';
 import 'screens/founding_members_screen.dart';
 import 'screens/homepage_screen.dart';
 import 'screens/contact_screen.dart';
