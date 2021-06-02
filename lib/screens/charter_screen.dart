@@ -21,7 +21,7 @@ class _CharterScreenState extends State<CharterScreen> {
       RegExp search = RegExp(
           '<article id="post-131" class="post-131 page type-page status-publish hentry">(.*?)</article>');
       Match _matcing = search.firstMatch(_htmlData);
-      _htmlData = _matcing.group(1);
+      //_htmlData = _matcing.group(1);
       debugPrint(_htmlData);
       setState(() {});
     });
