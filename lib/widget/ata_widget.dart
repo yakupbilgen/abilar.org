@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
-class AtaWidget extends InheritedWidget {
-  final String head = "This is a head";
-  final String afterMath;
+import '../helper/process.dart';
 
-  AtaWidget({Key key, @required Widget child, this.afterMath})
+class AtaWidget extends InheritedWidget {
+  final Process process;
+
+  AtaWidget({Key key, @required Widget child, this.process})
       : super(key: key, child: child);
 
   static AtaWidget of(BuildContext context) {

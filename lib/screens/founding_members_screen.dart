@@ -1,4 +1,3 @@
-import 'package:abilar/widget/ata_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../widget/founding_members_widget.dart';
@@ -18,7 +17,7 @@ class FoundingMembers extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(AtaWidget.of(context).head),
+        title: Text('Kurucu Üyeler'),
       ),
       body: Padding(
         padding: EdgeInsets.all(20),
