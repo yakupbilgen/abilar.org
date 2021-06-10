@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'widget/ata_widget.dart';
 import 'color/color.dart';
 import 'screens/charter_screen.dart';
 import 'screens/contact_screen.dart';
 import 'screens/founding_members_screen.dart';
 import 'screens/homepage_screen.dart';
+import 'widget/ata_widget.dart';
 
 void main() {
   runApp(
