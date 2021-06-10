@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/services.dart';
+import 'package:flutter_html/flutter_html.dart';
 
 class CharterScreen extends StatefulWidget {
   @override
@@ -9,21 +10,19 @@ class CharterScreen extends StatefulWidget {
 
 class _CharterScreenState extends State<CharterScreen> {
   String _htmlData = '';
-  var _charterUrl = Uri.parse('https://abilar.org/hakkimizda/tuzuk');
+  var _charterUrl = Uri.parse('https://abilar.org/regulations/');
 
   Future _getHttpData() async {
-    _htmlData = '';
+    //_htmlData = '';
     setState(() {});
     await http.get(_charterUrl).then((value) {
       _htmlData = value.body;
-      // _htmlData = _htmlData.replaceAll('\n', '');
-      // _htmlData = _htmlData.replaceAll('  ', '');
 
       // ignore: unused_local_variable
-      RegExp search = RegExp(
+      /*RegExp search = RegExp(
           '<article id="post-131" class="post-131 page type-page status-publish hentry">(.*?)</article>');
-      //Match _matcing = search.firstMatch(_htmlData);
-      //_htmlData = _matcing.group(1);
+      Match _matcing = search.firstMatch(_htmlData);
+      _htmlData = _matcing.group(1);*/
       debugPrint(_htmlData);
       setState(() {});
     });
@@ -58,7 +57,12 @@ class _CharterScreenState extends State<CharterScreen> {
       ),
       body: Center(
           child: _htmlData.length > 0
-              ? SingleChildScrollView(child: Text(_htmlData))
+              ? SingleChildScrollView(
+                  child: Padding(
+                    padding: EdgeInsets.all(8),
+                    child: Html(data: _htmlData),
+                  ),
+                )
               : CircularProgressIndicator()),
     );
   }
