@@ -61,6 +61,7 @@ class _CharterScreenState extends State<CharterScreen> {
       body: Center(
           child: _htmlData.length > 0
               ? SingleChildScrollView(
+                  physics: ClampingScrollPhysics(),
                   child: Padding(
                     padding: EdgeInsets.all(8),
                     child: Html(data: _htmlData),
