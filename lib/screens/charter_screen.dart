@@ -16,7 +16,10 @@ class _CharterScreenState extends State<CharterScreen> {
     //_htmlData = '';
     setState(() {});
     await http.get(_charterUrl).then((value) {
-      _htmlData = value.body;
+      _htmlData = value.body
+          .replaceAll('\n', '')
+          .replaceAll('\t', '')
+          .replaceAll('  ', '');
 
       // ignore: unused_local_variable
       /*RegExp search = RegExp(
