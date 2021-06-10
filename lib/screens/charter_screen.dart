@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:flutter/services.dart';
 
 class CharterScreen extends StatefulWidget {
   @override
@@ -18,9 +19,10 @@ class _CharterScreenState extends State<CharterScreen> {
       // _htmlData = _htmlData.replaceAll('\n', '');
       // _htmlData = _htmlData.replaceAll('  ', '');
 
+      // ignore: unused_local_variable
       RegExp search = RegExp(
           '<article id="post-131" class="post-131 page type-page status-publish hentry">(.*?)</article>');
-      Match _matcing = search.firstMatch(_htmlData);
+      //Match _matcing = search.firstMatch(_htmlData);
       //_htmlData = _matcing.group(1);
       debugPrint(_htmlData);
       setState(() {});
@@ -31,6 +33,11 @@ class _CharterScreenState extends State<CharterScreen> {
   void initState() {
     super.initState();
     _getHttpData();
+
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
   }
 
   @override
