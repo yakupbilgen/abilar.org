@@ -25,7 +25,6 @@ class HomePageMain extends StatefulWidget {
 class _HomePageMainState extends State<HomePageMain> {
   @override
   Widget build(BuildContext context) {
-    AtaWidget.of(context).process.request();
     return MaterialApp(
       home: HomePage(),
       theme: ThemeData(

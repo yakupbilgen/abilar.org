@@ -1,3 +1,4 @@
+import 'package:abilar/helper/announcement.dart';
 import 'package:flutter/material.dart';
 import 'package:share/share.dart';
 
@@ -19,6 +20,11 @@ class _HomePageState extends State<HomePage> {
       key: _scaffoldKey,
       appBar: buildAppBar(),
       drawer: DrawerWidget(),
+      body: Container(
+        child: Column(
+          children: [AnnouncementWidget()],
+        ),
+      ),
     );
   }
 

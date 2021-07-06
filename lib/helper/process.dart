@@ -22,10 +22,10 @@ class ProcessInfo implements Process {
   @override
   Future request() async {
     await http.get(_url).then((snapshot) {
-      getData = snapshot.body
-          .replaceAll('\n', '')
+      getData = snapshot.body;
+      /*.replaceAll('\n', '')
           .replaceAll('\t', '')
-          .replaceAll('  ', '');
+          .replaceAll('  ', '');*/
       print(getData);
     });
   }
